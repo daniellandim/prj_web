@@ -1,21 +1,12 @@
 <?php
 if(isset($_POST["calcular"])){
-	
-$tipoF = $_POST["tipoF"];
-$valor = $_POST["valor"];
-$entrada = $_POST["entrada"];
-$periodo = $_POST["nPrestacoes"]; 
-$taxa = 0.015;
-
-$sDevedor = $valor - $entrada;
-
-$prestacao = $sDevedor * (pow(1 + $taxa,$periodo) * $taxa) / (pow(1 + $taxa, $periodo) - 1);
-
-$juros       = array ($periodo);
-$amortizacao = array ($periodo);
-$sDevedor    = array ($periodo);
-
-$saldoAux = $valor;
+		
+	$tipoF   = $_POST["tipoF"];
+	$valor   = $_POST["valor"];
+	$entrada = $_POST["entrada"];
+	$periodo = $_POST["nPrestacoes"]; 
+	$taxa = 3;
+	$taxa /= 100;
 	
 }
 
@@ -218,7 +209,7 @@ $saldoAux = $valor;
            
                 <label class="col-sm-4 control-label">Tipo de Financiamento</label>
                 <div class="input-group col-sm-4">
-                <select class="form-control" name="tipoF">
+                <select class="form-control" required name="tipoF">
                   <option value="0">Selecione</option>
                   <option value="1">SAC</option>
                   <option value="2">PRICE</option>
@@ -276,10 +267,19 @@ $saldoAux = $valor;
         
 <div class="container">
 
-	<?php  if(isset($_POST["calcular"])){?>
-
+	<?php  if(isset($_POST["calcular"])){
+	
+	if($tipoF == 2){
+	
+	?>
+<fieldset>
 <table class="table table-hover"  border="0">
   <tr>
+  	<td colspan="5" class="text-center"><h3> <strong>Financiamento Price</strong></h3></td>
+  </tr>
+  
+  
+  <tr class="bg-info">
     <td width="20%">Nº da Parcela</td>
     <td width="18%">Amortização</td>
     <td width="24%">Juros</td>
@@ -287,8 +287,24 @@ $saldoAux = $valor;
     <td width="17%">Saldo Devedor</td>
   </tr>
   
+  
+   <tr>
+    <td>0</td>
+    <td>0,00</td>
+    <td>0,00</td>
+     <td>0,00</td>
+    <td><?php echo number_format($sDevedor1 = ($valor - $entrada) ,2,",",".");?></td>
+  </tr>
   <?php 
   
+ 
+		    $sDevedor    = $valor - $entrada;
+			$prestacao   = $sDevedor * (pow(1 + $taxa,$periodo) * $taxa) / (pow(1 + $taxa, $periodo) - 1);
+			$juros       = array ($periodo);
+			$amortizacao = array ($periodo);
+			$sDevedor    = array ($periodo);
+			
+			$saldoAux = $valor - $entrada;	
  
   
   for($i = 1 ; $i <= $periodo; $i++){
@@ -308,7 +324,7 @@ $saldoAux = $valor;
   
   
   ?>
-  <tr>
+ <tr>
     <td><?php echo $i;?></td>
     <td><?php echo number_format($amortizacao['$i'] ,2,",",".");?></td>
     <td><?php echo number_format($juros['$i'] ,2,",",".");?></td>
@@ -317,16 +333,92 @@ $saldoAux = $valor;
   </tr>
   <?php } }?>
 </table>
+<?php }?>
+</fieldset>
 
+</div>
+
+<div class="container">
+<?php  if(isset($_POST["calcular"])){
+	
+		if($tipoF == 1){
+	
+	?>
+<fieldset>
+	
+<table class="table table-hover"  border="0">
+
+	<tr>
+  	<td colspan="5" class="text-center"><h3> <strong>Financiamento SAC</strong></h3></td>
+ 	</tr>
+
+  <tr class="bg-info">
+    <td>Nº da Parcela</td>
+    <td>Juros</td>
+    <td>Prestação</td>
+     <td>Amortização</td>
+    <td>Saldo Devedor</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0,00</td>
+    <td>0,00</td>
+     <td>0,00</td>
+    <td><?php echo number_format($sDevedor1 = ($valor - $entrada) ,2,",",".");?></td>
+  </tr>
+  
+  <?php 
+    
+	$sDevedor1 = $valor - $entrada;
+	
+	$amortizacao = ($sDevedor1 / $periodo); 
+	
+	$juros     = array ($periodo);
+	$sDevedor  = array ($periodo);
+	$prestacao = array ($periodo);
+
+	$saldoAux = $sDevedor1;
+	
+	
+ 	
+  
+  for ($i = 1; $i <= $periodo; $i++) {
+          
+ 			$juros[$i] = $saldoAux * $taxa;
+			
+			
+            
+			$sDevedor[$i] = $saldoAux - $amortizacao;
+            
+						
+			$saldoAux = $sDevedor[$i];
+            
+			$prestacao[$i] = $amortizacao + $juros[$i];
+	
+	
+  
+  
+  ?>
+  <tr>
+    <td><?php echo $i;?></td>
+    <td><?php echo number_format($juros[$i] ,2,",",".");?></td>
+    <td><?php echo number_format($prestacao[$i],2,",",".");?></td>
+    <td><?php echo number_format($amortizacao,2,",",".");?></td>
+    <td><?php echo number_format($sDevedor[$i] ,2,",",".");?></td>
+  </tr>
+  <?php } }?>
+</table>
+</fieldset>
+<?php } ?>
 </div>
 
     <?php include 'footer.php' ;?>
     
     
     <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) --> 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<!-- Inclui todos os plugins compilados (abaixo), ou inclua arquivos separadados se necessário --> 
-<script src="js/bootstrap.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<!-- Inclui todos os plugins compilados (abaixo), ou inclua arquivos separadados se necessário --> 
+	<script src="js/bootstrap.min.js"></script>
 
     
      </div>

@@ -62,7 +62,7 @@
                  
               <div class="col-xs-6 col-md-12">
     			
-                	<a href="#" class="thumbnail" data-toggle="modal" data-target="#simulacao"><img src="../img/simula.png" >
+                	<a href="simulacaoForm.php" class="thumbnail"><img src="../img/simula.png" >
                     
                     <p align="center">Simulador de Financiamento</p>
                     
@@ -74,29 +74,8 @@
                  
                  
                  
-                 <!-- Modal simulação -->
-
-<div class="modal fade" id="simulacao" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Alterar Minha Senha</h4>
-      </div>
-      <div class="modal-body">
-    
-        
-		<p>Simulacao</p>
-        
-                   
-     
-      
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+               
+                 
 
                  
                  
