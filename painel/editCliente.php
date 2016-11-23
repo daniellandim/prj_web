@@ -109,6 +109,25 @@
 	
 	?>
 
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script src="../js/jquery.maskedinput.js" type="text/javascript"></script>
+ 
+<script>
+jQuery(function($){
+ 
+   $("#telefone").mask("(99) 9999-9999");
+   $("#telefonej").mask("(99) 9999-9999");
+   $("#celular").mask("(99) 9 9999-9999");
+   $("#celularj").mask("(99) 9 9999-9999");
+   $("#cpf").mask("999.999.999-99");
+   $("#cnpj").mask("999.999.999/9999-99");
+   $("#cep").mask("99.999-999");
+   $("#cepj").mask("99.999-999");
+});
+
+</script>  
+
+
 
 <div class="row">
   <div class="col-xs-12 col-md-8">
@@ -180,14 +199,14 @@
     <div class="form-group">
       <label for="telFixo" class="col-sm-2 control-label">Telefone Fixo</label>
       <div class="col-sm-10">
-        <input name="telFixo" type="text" class="form-control" id="telFixo" value="<?php echo $editar["telFixo"];?>" placeholder="Digite o telefone fixo!">
+        <input name="telFixo" type="text" class="form-control" id="telefone" value="<?php echo $editar["telFixo"];?>" placeholder="Digite o telefone fixo!">
       </div>
     </div>
     
     <div class="form-group">
       <label for="telCel" class="col-sm-2 control-label">Telefone Celular</label>
       <div class="col-sm-10">
-        <input name="telCel" type="text" class="form-control" id="telCel" value="<?php echo $editar["telCel"];?>" placeholder="Digite o telefone celular!">
+        <input name="telCel" type="text" class="form-control" id="celular" value="<?php echo $editar["telCel"];?>" placeholder="Digite o telefone celular!">
       </div>
     </div>
     
@@ -196,7 +215,7 @@
      <div class="form-group">
       <label for="conjugue" class="col-sm-2 control-label">Conjugue</label>
       <div class="col-sm-10">
-        <input name="conjugue" type="text" class="form-control" id="telCel" value="<?php echo $editar["conjugue"];?>" placeholder="Digite o nome do conjugue!">
+        <input name="conjugue" type="text" class="form-control" id="conjugue" value="<?php echo $editar["conjugue"];?>" placeholder="Digite o nome do conjugue!">
       </div>
     </div>
     
@@ -204,7 +223,7 @@
      <div class="form-group">
       <label for="sComprador" class="col-sm-2 control-label">Segundo Comprador</label>
       <div class="col-sm-10">
-        <input name="sComprador" type="text" class="form-control" id="telCel" value="<?php echo $editar["sComprador"];?>" placeholder="Digite o Segundo comprador!">
+        <input name="sComprador" type="text" class="form-control" id="sComprador" value="<?php echo $editar["sComprador"];?>" placeholder="Digite o Segundo comprador!">
       </div>
     </div>
     

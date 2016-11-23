@@ -69,7 +69,7 @@
       <div class="pull-right"> <a href="cadCliente.php">
      
         <button type='button' class='btn btn-sm btn-success'>  <span class="glyphicon glyphicon-floppy-saved"></span> Cadastrar</button>
-        </a> <a href="gerar_planilha.php">
+        </a> <a href="gerar_planilhaC.php">
         <button type='button' class='btn btn-sm btn-danger'><span class="glyphicon glyphicon-duplicate"> Gerar Excel</button>
         </a>
         

@@ -17,6 +17,13 @@
   
    <?php include 'topo.php';
    
+  			if($_SESSION['perfil'] == 2){ 
+	
+				echo "<script> alert('Você não tem permissão para acessar esta página!'); location.href='index.php' </script>";
+				return true;
+				
+			}
+   
    
    if(isset($_POST['nome'])){
 				$pesquisar = $_POST['nome'];
@@ -112,7 +119,7 @@
 		?></td>
    
 <td class="text-center">
-	<a href="#"> <span class="glyphicon glyphicon-eye-open text-primary" aria-hidden="true" data-toggle="modal" data-target="#myModal<?php echo $row_msg_contatos["id"]; ?>"></span> 
+	<a href="#"> <span class="glyphicon glyphicon-eye-open text-primary" aria-hidden="true" data-toggle="modal" data-target="#meuModal<?php echo $row_msg_contatos["id"]; ?>"></span> 
     </a>
 
 <a href="editUsuario.php?id=<?php echo $row_msg_contatos["id"];?>"> <span class="glyphicon glyphicon-pencil text-warning" aria-hidden="true"></span> </a> 
@@ -124,10 +131,9 @@
 </tr>
             
 
+<!-- Visualizar usuário -->
 
-<!-- inicio Modal -->
-
-<div class="modal fade" id="myModal<?php echo $row_msg_contatos["id"]; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="meuModal<?php echo $row_msg_contatos["id"]; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -135,6 +141,8 @@
         <h4 class="modal-title text-center" id="myModalLabel" >Cadastro do Usuário</h4>
       </div>
       <div class="modal-body">
+      
+      <fieldset>
       <div class="alert alert-info" role="alert">Nome:<?php echo $row_msg_contatos["nome"]; ?></div>
       <div class="alert alert-info" role="alert">E-mail: <?php echo $row_msg_contatos["email"]; ?></div>
       <div class="alert alert-info" role="alert">Login: <?php echo $row_msg_contatos["login"]; ?></div>
@@ -154,7 +162,7 @@
 										?></div>
        
       </div>
-
+		</fieldset>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
       </div>
@@ -162,8 +170,7 @@
   </div>
 </div>
             
-          <!-- fim Modal -->  
-            
+          <!-- fim  do Modal visualizar usuário-->          
             
                 
                       

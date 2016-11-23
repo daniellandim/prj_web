@@ -1,92 +1,14 @@
-@charset "utf-8";
-/* CSS Document */
-
-
-body{
-	background-color:#003466; 
-	padding-top:280px;
-	
+fieldset{
+    background: white none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 3px;
+    bottom: 80px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px 30px;
+    position: relative;
+    top: 10px;
+    width: 100%;
 }
-
-#formulario{
-	width:380px;
-	height:auto; 
-	position:relative; 
-	margin:0 auto; 
-	overflow:hidden; 
-	background-color:#eee; 
-	border:solid 2px #ddd; 
-	border-radius:5px; 
-	padding:25px;
-	}
-
-label{
-	width:80px; 
-	height:30px; 
-	position:relative; 
-	float:left; 
-	font-family: Verdana, Geneva, sans-serif;
-	font-size:16px; color:#333; 
-	line-height:30px; 
-	margin:1px;
-	}
-	
-input{
-	width:260px; 
-	height:30px; 
-	position:relative; 
-	float:left; 
-	overflow:hidden; 
-	border:solid 1px #ddd;
-	border-radius: 7px;
-	background:linear-gradient( #CCCCCC, #FFFFFF); 
-	margin:2px; 
-	outline:none;
-	text-indent: 10px;
-	}
-	
-input#logar{
-	width:150px; 
-	height:50px; 
-	position:relative;
-	left:-25px;
-	float:right; 
-	margin:5px; 
-	padding:5px; 
-	background:linear-gradient( #003466, #026AB3);
-	border:none; 
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; 
-	font-size:18px; 
-	color:#fff; 
-	cursor:pointer;
-	}
-
-#rodape{
-	width:553px; 
-	height:30px;
-	margin:auto;
-	margin-top:28px;
-	text-align:center;
-}
-
-#rodape2{
-	width:553px; 
-	height:30px;
-	margin:auto;
-	margin-top:10px;
-	text-align:center;
-}
-
-.estilo1{
-	font:12px 
-	Arial; 
-	color:#FFF;
-	
-}
-
-.estilo2{
-	font:40px 
-	Arial; 
-	color:#FFF;
-	text-align:center;
-	}

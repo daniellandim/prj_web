@@ -1,4 +1,5 @@
 <?php
+
 	
 	if(!isset($_SESSION)){
  	
@@ -8,15 +9,17 @@
 	
 	include '../config/conexao.php';
 	include '../views/modais.php';
+	
+	
 
-		if(isset($_GET['logout']) || !$_SESSION['perfil'] ){
+		if(isset($_GET['logout']) || !$_SESSION['perfil']){
   			
 			session_destroy();
   
   			header('Location: ../index.php');
 		}
 
-	
+
 
 ?>
 
@@ -39,6 +42,8 @@
 
     <!-- Morris Charts CSS -->
     <link href="../css/morris.css" rel="stylesheet">
+    
+     <link href="../css/estilo.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -185,9 +190,8 @@
                         <i class="glyphicon glyphicon-user"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#" data-toggle="modal" data-target="#myModal<?php echo $_SESSION['id'] ;?>"><i class="glyphicon glyphicon-user" ></i> Perfil Usuário</a>
-                        </li>
-                        <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Configurações</a>
+                       
+                        <li><a href="#"  data-toggle="modal" data-target="#altSenha<?php echo $_SESSION['id'] ;?>"><i class="glyphicon glyphicon-cog"></i> Alterar senha!</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="?logout"><i class="glyphicon glyphicon-share"></i> Logout</a>
@@ -201,6 +205,9 @@
             
             </nav>
             
+            
+           
+            
             <div class="jumbotron">
             	<h2>Olá, <?php echo $_SESSION['nome'];?></h2>
             	<p>Bem vindo a área administracional do sistema..</p>
@@ -209,3 +216,6 @@
    
 </body>
 </html>
+
+
+

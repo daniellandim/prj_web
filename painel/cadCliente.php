@@ -136,7 +136,25 @@ if(isset($_POST["cadastrar2"])){
 			
 ?>
 
-           
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script src="../js/jquery.maskedinput.js" type="text/javascript"></script>
+ 
+<script>
+jQuery(function($){
+ 
+   $("#telefone").mask("(99) 9999-9999");
+   $("#telefonej").mask("(99) 9999-9999");
+   $("#celular").mask("(99) 9 9999-9999");
+   $("#celularj").mask("(99) 9 9999-9999");
+   $("#cpf").mask("999.999.999-99");
+   $("#cnpj").mask("999.999.999/9999-99");
+   $("#cep").mask("99.999-999");
+   $("#cepj").mask("99.999-999");
+});
+
+</script>            
+
+
 
 <div class="row">
   
@@ -212,14 +230,14 @@ if(isset($_POST["cadastrar2"])){
     <div class="form-group">
       <label for="telFixo" class="col-sm-2 control-label">Telefone Fixo</label>
       <div class="col-sm-10">
-        <input name="telFixo" type="text" class="form-control" id="telFixo" placeholder="Digite o telefone fixo!">
+        <input name="telFixo" type="text" class="form-control" id="telefone" placeholder="Digite o telefone fixo!">
       </div>
     </div>
     
     <div class="form-group">
       <label for="telCel" class="col-sm-2 control-label">Telefone Celular</label>
       <div class="col-sm-10">
-        <input name="telCel" type="text" class="form-control" id="tel" placeholder="Digite o telefone celular!">
+        <input name="telCel" type="text" class="form-control" id="celular" placeholder="Digite o telefone celular!">
       </div>
     </div>
     
@@ -252,7 +270,7 @@ if(isset($_POST["cadastrar2"])){
      <div class="form-group">
       <label for="obs" class="col-sm-2 control-label">Observações</label>
       <div class="col-sm-10">
-      <textarea name="obs" type="text" class="form-control" id="telCel" placeholder="Observações!"></textarea>
+      <textarea name="obs" type="text" class="form-control" id="obs" placeholder="Observações!"></textarea>
       </div>
     </div>
     
@@ -262,8 +280,7 @@ if(isset($_POST["cadastrar2"])){
     <div class="form-group">
       <label for="cep" class="col-sm-2 control-label">Cep</label>
       <div class="col-sm-10">
-        <input name="cep" type="text" class="form-control" id="cep" value="" maxlength="9"
-               onblur="pesquisacep(this.value);"  placeholder="Digite o CEP!">
+        <input name="cep" type="text" class="form-control" id="cep"  placeholder="Digite o CEP!">
       </div>
     </div>
     
@@ -395,14 +412,14 @@ if(isset($_POST["cadastrar2"])){
     <div class="form-group">
       <label for="inputPassword3" class="col-sm-2 control-label">Telefone Fixo</label>
       <div class="col-sm-10">
-        <input name="telFixo" type="text" class="form-control" id="telFixo" placeholder="Digite o telefone fixo!">
+        <input name="telFixo" type="text" class="form-control" id="telefonej" placeholder="Digite o telefone fixo!">
       </div>
     </div>
     
     <div class="form-group">
       <label for="inputPassword3" class="col-sm-2 control-label">Telefone Celular</label>
       <div class="col-sm-10">
-        <input name="telCel" type="text" class="form-control" id="telCel" placeholder="Digite o telefone celular!">
+        <input name="telCel" type="text" class="form-control" id="celularj" placeholder="Digite o telefone celular!">
       </div>
     </div>
     
@@ -414,7 +431,7 @@ if(isset($_POST["cadastrar2"])){
     <div class="form-group">
       <label for="inputPassword3" class="col-sm-2 control-label">Cep</label>
       <div class="col-sm-10">
-        <input name="cep" type="text" class="form-control" id="cep" placeholder="Digite o CEP!">
+        <input name="cep" type="text" class="form-control" id="cepj" placeholder="Digite o CEP!">
       </div>
     </div>
     

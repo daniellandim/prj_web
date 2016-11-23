@@ -20,7 +20,7 @@
 		$html = '';
 		$html .= '<table border="1">';
 		$html .= '<tr>';
-		$html .= '<td colspan="5">Lista de Usuários do sistema!</tr>';
+		$html .= '<td colspan="5">Lista de clientes do sistema!</tr>';
 		$html .= '</tr>';
 		
 		
@@ -28,24 +28,47 @@
 		$html .= '<td><b>ID</b></td>';
 		$html .= '<td><b>Nome</b></td>';
 		$html .= '<td><b>E-mail</b></td>';
-		$html .= '<td><b>Perfil</b></td>';
-		$html .= '<td><b>Data de cadastro</b></td>';
+		$html .= '<td><b>CPF / CNPJ</b></td>';
+		$html .= '<td><b>Telefone</b></td>';
+		$html .= '<td><b>Celular</b></td>';
+		$html .= '<td><b>Conjugue</b></td>';
+		$html .= '<td><b>2º Comprador</b></td>';
+		$html .= '<td><b>status</b></td>';
+		$html .= '<td><b>Observações</b></td>';
+		$html .= '<td><b>CEP</b></td>';
+		$html .= '<td><b>Largadouro</b></td>';
+		$html .= '<td><b>Numero</b></td>';
+		$html .= '<td><b>Cidade</b></td>';
+		$html .= '<td><b>Bairro</b></td>';
+		$html .= '<td><b>UF</b></td>';
 		$html .= '</tr>';
 		
 		//Selecionar todos os itens da tabela 
-		$result_msg_contatos = "SELECT * FROM login";
+		$result_msg_contatos = "SELECT * FROM clientes";
 		$resultado_msg_contatos = mysqli_query($conexao , $result_msg_contatos);
 		
-		    $perfil[1] = "Admin";
-			$perfil[2] = "Usuário";
+		   
 		
 		while($row_msg_contatos = mysqli_fetch_assoc($resultado_msg_contatos)){
 			$html .= '<tr>';
 			$html .= '<td>'.$row_msg_contatos["id"].'</td>';
 			$html .= '<td>'.$row_msg_contatos["nome"].'</td>';
 			$html .= '<td>'.$row_msg_contatos["email"].'</td>';
-			$html .= '<td>'.$perfil[$row_msg_contatos["perfil"]].'</td>';
-			$html .= '<td>'.$row_msg_contatos["datacadastro"].'</td>';
+			$html .= '<td>'.$row_msg_contatos["cpf"].'</td>';
+			$html .= '<td>'.$row_msg_contatos["telFixo"].'</td>';
+			$html .= '<td>'.$row_msg_contatos["telCel"].'</td>';
+			$html .= '<td>'.$row_msg_contatos["conjugue"].'</td>';
+			$html .= '<td>'.$row_msg_contatos["sComprador"].'</td>';
+			$html .= '<td>'.$row_msg_contatos["status"].'</td>';
+			$html .= '<td>'.$row_msg_contatos["obs"].'</td>';
+			$html .= '<td>'.$row_msg_contatos["cep"].'</td>';
+			$html .= '<td>'.$row_msg_contatos["largadouro"].'</td>';
+			$html .= '<td>'.$row_msg_contatos["numero"].'</td>';
+			$html .= '<td>'.$row_msg_contatos["cidade"].'</td>';
+			$html .= '<td>'.$row_msg_contatos["bairro"].'</td>';
+			$html .= '<td>'.$row_msg_contatos["estado"].'</td>';
+			
+			
 			//$data = date('d/m/Y H:i:s',strtotime($row_msg_contatos["created"]));
 			//$html .= '<td>'.$data.'</td>';
 			$html .= '</tr>';
