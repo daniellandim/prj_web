@@ -1,6 +1,7 @@
 <?php
 if(isset($_POST["calcular"])){
-
+	
+$tipoF = $_POST["tipoF"];
 $valor = $_POST["valor"];
 $entrada = $_POST["entrada"];
 $periodo = $_POST["nPrestacoes"]; 
@@ -209,7 +210,26 @@ $saldoAux = $valor;
 		<fieldset>
                 
      <div class="form-group"><legend> Dados da Simulação </legend></div>
-
+     
+     
+            
+           
+           <div class="form-group">
+           
+                <label class="col-sm-4 control-label">Tipo de Financiamento</label>
+                <div class="input-group col-sm-4">
+                <select class="form-control" name="tipoF">
+                  <option value="0">Selecione</option>
+                  <option value="1">SAC</option>
+                  <option value="2">PRICE</option>
+                </select>
+                
+                </div>
+			
+           </div>
+           
+           
+           
             <div class="form-group">
                 <label class="col-sm-4 control-label">Valor</label>
                 <div class="input-group col-sm-4"><div class="input-group-addon ">R$</div><input class="money form-control text-right" maxlength="14" name="valor" required type="number" value="" />
