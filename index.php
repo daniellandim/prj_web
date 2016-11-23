@@ -191,10 +191,7 @@ $saldoAux = $valor;
      
     
     
-    <div class="row">
-  		
-               
-        <div class="col-md-12">
+ 
         
        
        
@@ -249,27 +246,19 @@ $saldoAux = $valor;
 
 
 
-</div>
-</div>
 
 
-
-
-        
        
        
-        	  
-        
-        </div>
-	</div>
-    
+       <br>
+       <br>
        
         
-     <div class="container">
+<div class="container">
 
 	<?php  if(isset($_POST["calcular"])){?>
 
-<table class="table table-hover" width="100%" border="1">
+<table class="table table-hover"  border="0">
   <tr>
     <td width="20%">Nº da Parcela</td>
     <td width="18%">Amortização</td>
