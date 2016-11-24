@@ -8,6 +8,13 @@ if(isset($_POST["calcular"])){
 	$taxa = 3;
 	$taxa /= 100;
 	
+	
+	if($tipoF == 0){
+		
+		echo "<script> alert('Tipo de Financiamento obrigadorio!'); location.href='index.php' </script>";
+		
+		}
+	
 }
 
 ?>
@@ -36,7 +43,7 @@ if(isset($_POST["calcular"])){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">SIMULADOR ON-LINE</a>
+          <a class="navbar-brand" href="index.php">SIMULADOR ON-LINE</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" action="controllers/login.php" method="post">

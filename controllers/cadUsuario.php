@@ -17,7 +17,7 @@
 		
 		echo "
 		<script>
-		 alert('Senha diferente!'); location.href='index.php'
+		 alert('Senha diferente!'); location.href='../painel/cadUsuario.php'
 		</script>";
 			return true;
 		

@@ -1,4 +1,14 @@
 <?php
+	session_start();
+
+				if(!$_SESSION['perfil'] == 1 || !$_SESSION['perfil'] == 2){ 
+	
+				header("Location: ../index.php");
+				exit();
+				
+			}
+
+
 
 	if(isset($_POST["calcular"])){
 		

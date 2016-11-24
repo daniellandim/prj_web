@@ -69,7 +69,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SisFNI Admin </a>
+                <a class="navbar-brand" href="index.php">SisFNI Admin </a>
             </div>
            
           	
@@ -116,7 +116,7 @@
                         </li>
                         
                         <li>
-                        <a href="#"><i class="glyphicon glyphicon-usd"></i> Simulador de Financiamento</a>
+                        <a href="simulacaoForm.php"><i class="glyphicon glyphicon-usd"></i> Simulador de Financiamento</a>
                         </li>
                             
                       

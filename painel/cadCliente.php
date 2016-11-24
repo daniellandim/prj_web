@@ -1,3 +1,13 @@
+<?php
+	session_start();
+
+				if(!$_SESSION['perfil'] == 1 || !$_SESSION['perfil'] == 2){ 
+	
+				header("Location: ../index.php");
+				exit();
+				
+			}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -198,19 +208,19 @@ jQuery(function($){
     <div class="form-group">
       <label class="col-sm-2 control-label">Nome</label>
       <div class="col-sm-10">
-        <input name="nome" type="text" class="form-control" id="nome"  placeholder="Digite seu nome completo">
+        <input name="nome" type="text" class="form-control" id="nome" required placeholder="Digite seu nome completo">
       </div>
     </div>
     <div class="form-group">
       <label class="col-sm-2 control-label">E-mail</label>
       <div class="col-sm-10">
-        <input name="email" type="email" class="form-control" id="email"  placeholder="Digite seu nome e-mail mais usado">
+        <input name="email" type="email" class="form-control" id="email" required placeholder="Digite seu nome e-mail mais usado">
       </div>
     </div>
     <div class="form-group">
       <label class="col-sm-2 control-label">Sexo</label>
       <div class="col-sm-10">
-        <select class="form-control" name="sexo">
+        <select class="form-control" required name="sexo">
           <option value="0">Selecione</option>
           <option value="1">Masculino</option>
           <option value="2">Feminino</option>
@@ -222,7 +232,7 @@ jQuery(function($){
     <div class="form-group">
       <label for="cpf" class="col-sm-2 control-label">CPF</label>
       <div class="col-sm-10">
-        <input name="cpf"  type="text" class="form-control" id="cpf" placeholder="Digite o CPF">
+        <input name="cpf"  type="text" class="form-control" required id="cpf" placeholder="Digite o CPF">
       </div>
     </div>
     
@@ -230,14 +240,14 @@ jQuery(function($){
     <div class="form-group">
       <label for="telFixo" class="col-sm-2 control-label">Telefone Fixo</label>
       <div class="col-sm-10">
-        <input name="telFixo" type="text" class="form-control" id="telefone" placeholder="Digite o telefone fixo!">
+        <input name="telFixo" type="text" class="form-control" required id="telefone" placeholder="Digite o telefone fixo!">
       </div>
     </div>
     
     <div class="form-group">
       <label for="telCel" class="col-sm-2 control-label">Telefone Celular</label>
       <div class="col-sm-10">
-        <input name="telCel" type="text" class="form-control" id="celular" placeholder="Digite o telefone celular!">
+        <input name="telCel" type="text" class="form-control" required id="celular" placeholder="Digite o telefone celular!">
       </div>
     </div>
     
@@ -246,7 +256,7 @@ jQuery(function($){
      <div class="form-group">
       <label for="conjugue" class="col-sm-2 control-label">Conjugue</label>
       <div class="col-sm-10">
-        <input name="conjugue" type="text" class="form-control" id="telCel" placeholder="Digite o nome do conjugue!">
+        <input name="conjugue" type="text" class="form-control" required id="telCel" placeholder="Digite o nome do conjugue!">
       </div>
     </div>
     
@@ -254,7 +264,7 @@ jQuery(function($){
      <div class="form-group">
       <label for="sComprador" class="col-sm-2 control-label">Segundo Comprador</label>
       <div class="col-sm-10">
-        <input name="sComprador" type="text" class="form-control" id="telCel" placeholder="Digite o Segundo comprador!">
+        <input name="sComprador" type="text" class="form-control" required id="telCel" placeholder="Digite o Segundo comprador!">
       </div>
     </div>
     
@@ -263,14 +273,14 @@ jQuery(function($){
      <div class="form-group">
       <label for="status" class="col-sm-2 control-label">Status</label>
       <div class="col-sm-10">
-        <input name="status" type="text" class="form-control" id="status" placeholder="Digite o status!">
+        <input name="status" type="text" class="form-control" id="status" required placeholder="Digite o status!">
       </div>
     </div>
     
      <div class="form-group">
       <label for="obs" class="col-sm-2 control-label">Observações</label>
       <div class="col-sm-10">
-      <textarea name="obs" type="text" class="form-control" id="obs" placeholder="Observações!"></textarea>
+      <textarea name="obs" type="text" class="form-control" id="obs" required placeholder="Observações!"></textarea>
       </div>
     </div>
     
@@ -280,21 +290,21 @@ jQuery(function($){
     <div class="form-group">
       <label for="cep" class="col-sm-2 control-label">Cep</label>
       <div class="col-sm-10">
-        <input name="cep" type="text" class="form-control" id="cep"  placeholder="Digite o CEP!">
+        <input name="cep" type="text" class="form-control" id="cep" required  placeholder="Digite o CEP!">
       </div>
     </div>
     
     <div class="form-group">
       <label for="largadouro" class="col-sm-2 control-label">Largadouro</label>
       <div class="col-sm-10">
-        <input name="largadouro" type="text" class="form-control" id="largadouro" placeholder="Digite o Lagardouro!">
+        <input name="largadouro" type="text" class="form-control" required id="largadouro" placeholder="Digite o Lagardouro!">
       </div>
     </div>
     
     <div class="form-group">
       <label for="numero" class="col-sm-2 control-label">Numero</label>
       <div class="col-sm-10">
-        <input name="numero" type="text" class="form-control" id="numero" placeholder="Digite o numero!">
+        <input name="numero" type="text" class="form-control" id="numero" required placeholder="Digite o numero!">
       </div>
     </div>
     
@@ -308,7 +318,7 @@ jQuery(function($){
     <div class="form-group">
       <label class="col-sm-2 control-label">Bairro</label>
       <div class="col-sm-10">
-        <input name="bairro" type="text" class="form-control" id="bairro"  placeholder="Digite o bairro">
+        <input name="bairro" type="text" class="form-control" id="bairro" required  placeholder="Digite o bairro">
       </div>
     </div>
     
@@ -317,7 +327,7 @@ jQuery(function($){
     <div class="form-group">
       <label class="col-sm-2 control-label">Estado</label>
       <div class="col-sm-10">
-        <select class="form-control" name="estado">
+        <select class="form-control" required name="estado">
           <option value=""> Selecione </option>
           <option value="AC">Acre</option>
           <option value="AL">Alagoas</option>
@@ -379,7 +389,7 @@ jQuery(function($){
     <div class="form-group">
       <label class="col-sm-2 control-label">CNPJ</label>
       <div class="col-sm-10">
-        <input name="cpf" type="text" class="form-control" id="cnpj"  placeholder="Digite o CNPJ">
+        <input name="cpf" type="text" class="form-control" required id="cnpj"  placeholder="Digite o CNPJ">
       </div>
     </div>
     
@@ -387,14 +397,14 @@ jQuery(function($){
     <div class="form-group">
       <label class="col-sm-2 control-label">Razão Social</label>
       <div class="col-sm-10">
-        <input name="rSocial" type="text" class="form-control" id="nome"  placeholder="Digite a razão social">
+        <input name="rSocial" type="text" class="form-control" required id="nome"  placeholder="Digite a razão social">
       </div>
     </div>
     
     <div class="form-group">
       <label class="col-sm-2 control-label">Nome Responsável</label>
       <div class="col-sm-10">
-        <input name="nome" type="text" class="form-control" id="nomeR"  placeholder="Digite seu nome do responsavel">
+        <input name="nome" type="text" class="form-control" id="nomeR" required placeholder="Digite seu nome do responsavel">
       </div>
     </div>
     
@@ -402,7 +412,7 @@ jQuery(function($){
     <div class="form-group">
       <label class="col-sm-2 control-label">E-mail</label>
       <div class="col-sm-10">
-        <input name="email" type="text" class="form-control" id="email"  placeholder="Digite o email ">
+        <input name="email" type="text" class="form-control" id="email" required  placeholder="Digite o email ">
       </div>
     </div>
     
@@ -412,14 +422,14 @@ jQuery(function($){
     <div class="form-group">
       <label for="inputPassword3" class="col-sm-2 control-label">Telefone Fixo</label>
       <div class="col-sm-10">
-        <input name="telFixo" type="text" class="form-control" id="telefonej" placeholder="Digite o telefone fixo!">
+        <input name="telFixo" type="text" class="form-control" id="telefonej"  required placeholder="Digite o telefone fixo!">
       </div>
     </div>
     
     <div class="form-group">
       <label for="inputPassword3" class="col-sm-2 control-label">Telefone Celular</label>
       <div class="col-sm-10">
-        <input name="telCel" type="text" class="form-control" id="celularj" placeholder="Digite o telefone celular!">
+        <input name="telCel" type="text" class="form-control" id="celularj" required placeholder="Digite o telefone celular!">
       </div>
     </div>
     
@@ -431,35 +441,35 @@ jQuery(function($){
     <div class="form-group">
       <label for="inputPassword3" class="col-sm-2 control-label">Cep</label>
       <div class="col-sm-10">
-        <input name="cep" type="text" class="form-control" id="cepj" placeholder="Digite o CEP!">
+        <input name="cep" type="text" class="form-control" id="cepj" required placeholder="Digite o CEP!">
       </div>
     </div>
     
     <div class="form-group">
       <label for="inputPassword3" class="col-sm-2 control-label">Largadouro</label>
       <div class="col-sm-10">
-        <input name="largadouro" type="text" class="form-control" id="largadouro" placeholder="Digite o Lagardouro!">
+        <input name="largadouro" type="text" class="form-control" required id="largadouro" placeholder="Digite o Lagardouro!">
       </div>
     </div>
     
     <div class="form-group">
       <label for="inputPassword3" class="col-sm-2 control-label">Numero</label>
       <div class="col-sm-10">
-        <input name="numero" type="text" class="form-control" id="numero" placeholder="Digite o numero!">
+        <input name="numero" type="text" class="form-control" id="numero" required placeholder="Digite o numero!">
       </div>
     </div>
     
     <div class="form-group">
       <label class="col-sm-2 control-label">Cidade</label>
       <div class="col-sm-10">
-        <input name="cidade" type="text" class="form-control" id="cidade" placeholder="Digite a cidade!">
+        <input name="cidade" type="text" class="form-control" required id="cidade" placeholder="Digite a cidade!">
       </div>
     </div>
     
     <div class="form-group">
       <label class="col-sm-2 control-label">Bairro</label>
       <div class="col-sm-10">
-        <input name="bairro" type="text" class="form-control" id="bairro"  placeholder="Digite o bairro">
+        <input name="bairro" type="text" class="form-control" id="bairro" required  placeholder="Digite o bairro">
       </div>
     </div>
     
@@ -468,7 +478,7 @@ jQuery(function($){
     <div class="form-group">
       <label class="col-sm-2 control-label">Estado</label>
       <div class="col-sm-10">
-        <select class="form-control" name="estado">
+        <select class="form-control" required name="estado">
           <option value=""> Selecione </option>
           <option value="AC">Acre</option>
           <option value="AL">Alagoas</option>

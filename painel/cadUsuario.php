@@ -39,7 +39,7 @@
     <div class="form-group">
     	<label class="col-sm-2 control-label">Nome Completo</label>
     		<div class="col-sm-5">
-        <input name="nome" type="text" class="form-control" id="nome"  placeholder="Digite seu nome completo">
+        <input name="nome" type="text" class="form-control" id="nome" required placeholder="Digite seu nome completo">
       		</div>
     </div>
     
@@ -47,14 +47,14 @@
     <div class="form-group">
     	<label class="col-sm-2 control-label">E-mail</label>
      	   <div class="col-md-5">
-        		<input name="email" type="email" class="form-control" id="email"  placeholder="Digite seu nome e-mail mais usado">
+        		<input name="email" type="email" class="form-control" required id="email"  placeholder="Digite seu nome e-mail mais usado">
      	   </div>
     </div>
     
     <div class="form-group">
     	<label class="col-sm-2 control-label">Login / Usuário</label>
     		<div class="col-md-5">
-        		<input name="login" type="text" class="form-control" id="login"  placeholder="Digite seu Login / usuário">
+        		<input name="login" type="text" required class="form-control" id="login"  placeholder="Digite seu Login / usuário">
       		</div>
     </div>
    
@@ -62,7 +62,7 @@
     <div class="form-group">
     	<label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
       	  <div class="col-md-5">
-          	<input name="senha" type="password" class="form-control" id="inputPassword3" placeholder="Digite uma senha">
+          	<input name="senha" type="password" required class="form-control" id="inputPassword3" placeholder="Digite uma senha">
      	  </div>
     </div>
    
@@ -70,7 +70,7 @@
     <div class="form-group">
     	<label for="inputPassword3" class="col-sm-2 control-label">Confirmar senha</label>
       	  <div class="col-md-5">
-        		<input name="senha1" type="password" class="form-control" id="inputPassword3" placeholder="Digite uma senha">
+        		<input name="senha1" type="password" required class="form-control" id="inputPassword3" placeholder="Digite uma senha">
       	  </div>
     </div>
    
@@ -79,7 +79,7 @@
     <div class="form-group">
       <label class="col-sm-2 control-label">Perfil</label>
       <div class="col-md-5">
-        <select class="form-control" name="perfil">
+        <select class="form-control" required name="perfil">
           <option value="0">Selecione</option>
           <option value="1">Administrador</option>
           <option value="2">Usuário</option>
