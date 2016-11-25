@@ -28,7 +28,6 @@ if(isset($_POST["calcular"])){
 <link href="css/jumbotron.css" rel="stylesheet" type="text/css">
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
 <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet" type="text/css">
-	
 
 <title>::. Sistema FNI .::</title>
 </head>
@@ -86,7 +85,7 @@ if(isset($_POST["calcular"])){
       </div>
       <div class="modal-body">
        
-       <form class="form-horizontal" action="" method="post">
+       <form class="form-horizontal" action="controllers/enviaForm.php" method="post">
        
     <div class="form-group">
     	<label class="col-sm-2 control-label">Nome:</label>
@@ -230,7 +229,7 @@ if(isset($_POST["calcular"])){
            
             <div class="form-group">
                 <label class="col-sm-4 control-label">Valor</label>
-                <div class="input-group col-sm-4"><div class="input-group-addon ">R$</div><input class="money form-control text-right" maxlength="14" name="valor" required type="number" value="" />
+                <div class="input-group col-sm-4"><div class="input-group-addon ">R$</div><input class="money form-control text-right" name="valor" required type="number" id="valor" value="" />
                 </div>
 			</div>
             

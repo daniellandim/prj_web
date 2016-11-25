@@ -101,7 +101,7 @@
   </div>
  <?php while ($editar = @mysqli_fetch_array ($editar)){ ?>
  
-
+<fieldset>
   <form class="form-horizontal" action="editUsuario.php?id=<?php echo $id;?>" method="post">
     <div class="form-group">
       <label class="col-sm-2 control-label">Nome Completo</label>
@@ -158,6 +158,7 @@
     </div>
   </form>
 </div>
+</fieldset>
 <?php }
 
 	 include 'footer.php';

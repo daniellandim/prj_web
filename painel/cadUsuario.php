@@ -33,12 +33,12 @@
   <div class="page-header">
     <h1>Cadastrar Usuários</h1>
   </div>
-
+	<fieldset>
   <form class="form-horizontal" action="../controllers/cadUsuario.php" method="post">
    
     <div class="form-group">
     	<label class="col-sm-2 control-label">Nome Completo</label>
-    		<div class="col-sm-5">
+    		<div class="col-sm-10">
         <input name="nome" type="text" class="form-control" id="nome" required placeholder="Digite seu nome completo">
       		</div>
     </div>
@@ -46,14 +46,14 @@
     
     <div class="form-group">
     	<label class="col-sm-2 control-label">E-mail</label>
-     	   <div class="col-md-5">
-        		<input name="email" type="email" class="form-control" required id="email"  placeholder="Digite seu nome e-mail mais usado">
+     	   <div class="col-md-10">
+        		<input name="email" type="email" class="form-control" required id="email"  placeholder="email@email.com.br">
      	   </div>
     </div>
     
     <div class="form-group">
     	<label class="col-sm-2 control-label">Login / Usuário</label>
-    		<div class="col-md-5">
+    		<div class="col-md-10">
         		<input name="login" type="text" required class="form-control" id="login"  placeholder="Digite seu Login / usuário">
       		</div>
     </div>
@@ -61,7 +61,7 @@
    
     <div class="form-group">
     	<label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
-      	  <div class="col-md-5">
+      	  <div class="col-md-10">
           	<input name="senha" type="password" required class="form-control" id="inputPassword3" placeholder="Digite uma senha">
      	  </div>
     </div>
@@ -69,7 +69,7 @@
    
     <div class="form-group">
     	<label for="inputPassword3" class="col-sm-2 control-label">Confirmar senha</label>
-      	  <div class="col-md-5">
+      	  <div class="col-md-10">
         		<input name="senha1" type="password" required class="form-control" id="inputPassword3" placeholder="Digite uma senha">
       	  </div>
     </div>
@@ -78,7 +78,7 @@
    
     <div class="form-group">
       <label class="col-sm-2 control-label">Perfil</label>
-      <div class="col-md-5">
+      <div class="col-md-10">
         <select class="form-control" required name="perfil">
           <option value="0">Selecione</option>
           <option value="1">Administrador</option>
@@ -96,7 +96,7 @@
     </div>
   
   </form>
-
+</fieldset>
 	<?php  include 'footer.php';?>
 
 </div>

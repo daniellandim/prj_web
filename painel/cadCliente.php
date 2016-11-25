@@ -282,9 +282,11 @@ jQuery(function($){
       <textarea name="obs" type="text" class="form-control" id="obs" required placeholder="Observações!"></textarea>
       </div>
     </div>
+   
+    </br>
     
     <h3 class="text-success">Endereço</h3>
-    
+   
     
     <div class="form-group">
       <label for="cep" class="col-sm-2 control-label">Cep</label>
