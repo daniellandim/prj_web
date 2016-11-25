@@ -165,7 +165,6 @@ jQuery(function($){
 </script>            
 
 
-
 <div class="row">
   
   	<div class="col-xs-12 col-md-8">
@@ -232,7 +231,7 @@ jQuery(function($){
     <div class="form-group">
       <label for="cpf" class="col-sm-2 control-label">CPF</label>
       <div class="col-sm-10">
-        <input name="cpf"  type="text" class="form-control" required id="cpf" placeholder="Digite o CPF">
+        <input name="cpf"  type="text" class="form-control" required id="cpf" onBlur="ValidarCPF(form1.cpf);" placeholder="Digite o CPF">
       </div>
     </div>
     

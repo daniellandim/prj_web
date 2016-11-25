@@ -125,6 +125,9 @@
                     <!-- /.dropdown-tasks -->
                 </li>
                 <!-- /.dropdown -->
+               
+               
+               <?php if (1 ==3){?>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="glyphicon glyphicon-bell"></i> <i class="fa fa-caret-down"></i>
@@ -185,6 +188,10 @@
                     <!-- /.dropdown-alerts -->
                 </li>
                 <!-- /.dropdown -->
+               
+                <?php }?>
+               
+               
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="glyphicon glyphicon-user"></i> <i class="fa fa-caret-down"></i>

@@ -12,21 +12,30 @@
     
         
 
-  <form class="form-horizontal" action="" method="post">
+  <form class="form-horizontal" action="../controllers/alterarSenhaUser.php?id=<?php echo $_SESSION['id'];?>" method="post">
       
      
-   
+    <div class="form-group">
+      <label for="inputPassword3" class="col-sm-2 control-label">Nome</label>
+      <div class="col-sm-10">
+        <input name="usuario" type="text" class="form-control" id="inputPassword3" disabled="true" value="<?php echo $_SESSION['nome'];?>">
+      </div>
+    </div>
+    
+    
+    
+    
     <div class="form-group">
       <label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
       <div class="col-sm-10">
-        <input name="senha" type="password" class="form-control" id="inputPassword3" placeholder="Digite uma senha">
+        <input name="senha" type="password" class="form-control" id="inputPassword3" placeholder="Digite sua nova senha">
       </div>
     </div>
     
     <div class="form-group">
       <label for="inputPassword3" class="col-sm-2 control-label">Confirmar senha</label>
       <div class="col-sm-10">
-        <input name="senha1" type="password" class="form-control" id="inputPassword3" placeholder="Confirma a senha">
+        <input name="senha1" type="password" class="form-control" id="inputPassword3" placeholder="Confirme sua nova senha">
       </div>
     </div>
    
