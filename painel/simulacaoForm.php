@@ -134,19 +134,20 @@
     <td>0,00</td>
     <td>0,00</td>
      <td>0,00</td>
-    <td><?php echo number_format($sDevedor1 = ($valor - $entrada) ,2,",",".");?></td>
+    <td><?php echo number_format($saldo = ($valor - $entrada) ,2,",",".");?></td>
   </tr>
   
   <?php 
   $sDevedor = $valor - $entrada;
-	
+  
+  	
 	$prestacao = $sDevedor * (pow(1 + $taxa,$periodo) * $taxa) / (pow(1 + $taxa, $periodo) - 1);
 	
 	$juros       = array ($periodo);
 	$amortizacao = array ($periodo);
 	$sDevedor    = array ($periodo);
 	
-	$saldoAux = $valor;	
+	$saldoAux = $saldo;	
  
   
   for($i = 1 ; $i <= $periodo; $i++){
@@ -154,6 +155,7 @@
 	
 	
 	$juros['$i'] = ($saldoAux * $taxa);
+	
 	$jurosAux = $juros['$i'];
 	
 	$amortizacao['$i'] = $prestacao - $jurosAux;
